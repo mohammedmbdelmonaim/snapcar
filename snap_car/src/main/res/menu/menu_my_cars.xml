@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/delete_car"
+        android:title="@string/delete_car"
+        android:icon="@drawable/delete_forever_material"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/edit_car"
+        android:title="@string/edit_car"
+        android:icon="@drawable/edit_hi_res_512"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/make_as_sold"
+        android:title="@string/mark_as_sold"
+        android:icon="@drawable/check_circle"
+        app:showAsAction="ifRoom" />
+</menu>

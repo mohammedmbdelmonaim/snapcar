@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/car_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/border_gradient"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/margin"
+        android:background="@drawable/border_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/hot_zone_avatar"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@id/border_gradient"
+        app:layout_constraintEnd_toEndOf="@id/border_gradient"
+        app:layout_constraintStart_toStartOf="@id/border_gradient"
+        app:layout_constraintTop_toTopOf="@id/border_gradient" />
+
+    <TextView
+        android:id="@+id/tv_hot_zone_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:textColor="@color/colorTextPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_model"
+        app:layout_constraintEnd_toStartOf="@id/iv_fav"
+        app:layout_constraintStart_toEndOf="@id/border_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Starbucks Coffe CoffeCoffeCoffeCoffe" />
+
+    <TextView
+        android:id="@+id/tv_model"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:visibility="gone"
+        tools:text="rdddddddddd"
+        app:layout_constraintBottom_toTopOf="@id/tv_type"
+        app:layout_constraintEnd_toEndOf="@id/tv_hot_zone_name"
+        app:layout_constraintStart_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_hot_zone_name" />
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:drawableStart="@drawable/selector_gender"
+        app:layout_constraintBottom_toTopOf="@id/tv_damaged"
+        app:layout_constraintEnd_toEndOf="@id/tv_hot_zone_name"
+        app:layout_constraintStart_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_model" />
+    <TextView
+        android:id="@+id/tv_damaged"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:text="@string/damaged_car"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/tv_hot_zone_name"
+        app:layout_constraintStart_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_type"
+        app:layout_constraintBottom_toTopOf="@id/tv_view_more"/>
+
+    <TextView
+        android:id="@+id/tv_view_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:layout_marginBottom="@dimen/margin"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:drawablePadding="@dimen/margin_nano"
+        android:gravity="start"
+        android:text="@string/view_more"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:textColor="@android:color/holo_green_light"
+        app:layout_constraintStart_toStartOf="@id/tv_type"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        tools:layout_editor_absoluteX="110dp" />
+
+    <ImageView
+        android:id="@+id/iv_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/my_favorites"
+        android:padding="@dimen/padding"
+        android:src="@drawable/selector_favorite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_share"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

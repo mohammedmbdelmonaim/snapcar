@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_newest"
+        android:title="@string/newest"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/item_price"
+        android:title="@string/price_without_dotted"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_price_low"
+        android:title="@string/price_without_low_dotted"
+        app:showAsAction="ifRoom" />
+
+</menu>

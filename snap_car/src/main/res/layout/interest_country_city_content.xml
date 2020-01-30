@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_country"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:paddingStart="@dimen/padding_micro"
+        android:textColorHint="@color/colorHintInterest">
+
+        <com.intcore.snapcar.core.widget.rxedittext.RxEditText
+            android:id="@+id/et_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorTextPrimary"
+            android:drawableEnd="@drawable/keyboard_arrow_down_material"
+            android:drawablePadding="@dimen/padding_micro"
+            android:focusable="false"
+            android:hint="@string/country"
+            android:textColorHint="@color/colorHintInterest"
+            android:textSize="@dimen/textSizeText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:paddingEnd="@dimen/padding_micro"
+        android:textColorHint="@color/colorHintInterest">
+
+        <com.intcore.snapcar.core.widget.rxedittext.RxEditText
+            android:id="@+id/et_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorTextPrimary"
+            android:drawableEnd="@drawable/keyboard_arrow_down_material"
+            android:drawablePadding="@dimen/padding_micro"
+            android:focusable="false"
+            android:hint="@string/city"
+            android:textColorHint="@color/colorHintInterest"
+            android:textSize="@dimen/textSizeText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

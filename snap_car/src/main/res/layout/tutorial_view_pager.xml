@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_walkthrough"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/walkthrough_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28    " />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_tutorial"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_tutorial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:src="@drawable/group" />
+
+    <TextView
+        android:id="@+id/tv_tutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/textSizeTitle"
+        app:layout_constraintBottom_toTopOf="@id/tv_description_tutorial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/civ_tutorial"
+        tools:text="Live Tracking" />
+
+    <TextView
+        android:id="@+id/tv_description_tutorial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:drawableStart="@drawable/ic_brightness_1_black_24dp"
+        android:textColor="@color/colorTextSecondary"
+        app:layout_constraintBottom_toTopOf="@id/tv_description_tutorial_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tutorial"
+        tools:text="Lorem sspecimen book. Ipsum." />
+
+    <TextView
+        android:id="@+id/tv_description_tutorial_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:drawableStart="@drawable/ic_brightness_1_black_24dp"
+        android:textColor="@color/colorTextSecondary"
+        app:layout_constraintBottom_toTopOf="@id/tv_description_tutorial_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_tutorial"
+        tools:text="Lorem s standard dummy tea type specimen book. Ipsum." />
+
+    <TextView
+        android:id="@+id/tv_description_tutorial_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:drawableStart="@drawable/ic_brightness_1_black_24dp"
+        android:textColor="@color/colorTextSecondary"
+        app:layout_constraintBottom_toTopOf="@id/tv_description_tutorial_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_tutorial_two"
+        tools:text="specimen book. Ipsum." />
+
+    <TextView
+        android:id="@+id/tv_description_tutorial_four"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:drawableStart="@drawable/ic_brightness_1_black_24dp"
+        android:textColor="@color/colorTextSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_tutorial_three"
+        tools:text="and scrambled it to make a type specimen book. Ipsum." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

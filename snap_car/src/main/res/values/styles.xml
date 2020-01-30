@@ -1,0 +1,104 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="HostTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/colorLayoutBackground</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="EditProfileTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/colorLayoutBackground</item>
+        <item name="colorAccent">@color/colorTextPrimary</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="AddInterestTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/colorLayoutBackground</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="SignInTheme" parent="AppTheme">
+        <item name="colorAccent">@color/colorTextPrimary</item>
+        <item name="android:windowBackground">@color/md_white_1000</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+    </style>
+
+    <style name="style">
+        <item name="android:textColorHint">@color/md_red_A400</item>
+        <item name="android:textColor">@color/md_red_A400</item>
+    </style>
+
+    <style name="SearchEditTextStyle">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:padding">@dimen/padding_micro</item>
+        <item name="android:elevation">@dimen/cardview_default_elevation</item>
+        <item name="android:background">@drawable/background_search_edit_text</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textColorHint">@color/colorTextPrimary</item>
+        <item name="android:textSize">@dimen/textSizeText</item>
+        <item name="android:drawablePadding">@dimen/padding_micro</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#5a5a5c</item>
+        <item name="colorControlActivated">@color/md_orange_A200</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <style name="RatingReview" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#DCDEE9</item>
+        <item name="colorControlActivated"></item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorRed</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProfileBottomSheetWhiteTextStyle">
+        <item name="android:textColor">@color/md_white_1000</item>
+        <item name="android:background">@drawable/background_white_rounded_corner</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/padding</item>
+        <item name="android:paddingBottom">@dimen/padding</item>
+        <item name="android:paddingEnd">@dimen/padding</item>
+        <item name="android:paddingStart">@dimen/padding</item>
+        <item name="android:textSize">@dimen/textSizeText</item>
+    </style>
+
+    <style name="ProfileBottomSheetAttachmentTextStyle">
+        <item name="android:textColor">@drawable/selector_text</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:drawablePadding">@dimen/padding_micro</item>
+        <item name="android:padding">@dimen/padding_micro</item>
+        <item name="android:textSize">@dimen/textSizeText</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="MyCustomTheme" parent="@android:style/Theme.Panel">
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+    </style>
+
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+    </style>
+</resources>

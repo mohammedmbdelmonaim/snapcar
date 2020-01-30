@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorLayoutBackground">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding"
+                    android:src="@drawable/chevron_left_material" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/feedback"
+                    android:textColor="@color/colorTextPrimary" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:focusable="false"
+                android:textColorHint="@color/colorHintInterest">
+
+                <com.intcore.snapcar.core.widget.rxedittext.RxEditText
+                    android:id="@+id/et_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorBlack"
+                    android:drawableEnd="@drawable/big_down"
+                    android:drawablePadding="@dimen/padding_micro"
+                    android:focusable="false"
+                    android:hint="@string/contact"
+                    android:textColorHint="@color/colorHintInterest"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:textColorHint="@color/colorHintInterest">
+
+                <com.intcore.snapcar.core.widget.rxedittext.RxEditText
+                    android:id="@+id/et_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorBlack"
+                    android:drawablePadding="@dimen/padding_micro"
+                    android:hint="@string/subject"
+                    android:maxLength="100"
+                    android:textColorHint="@color/colorHintInterest"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <EditText
+                android:id="@+id/et_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="@dimen/margin"
+                android:background="@drawable/border_rounded_edit_text"
+                android:gravity="top|start"
+                android:hint="@string/type_your_feedback"
+                android:inputType="textMultiLine"
+                android:overScrollMode="always"
+                android:padding="@dimen/padding_micro"
+                android:scrollHorizontally="false"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/attachment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/attachment"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/im_attachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_nano"
+                    android:padding="@dimen/padding_micro"
+                    android:src="@drawable/attachment_material" />
+
+                <ImageView
+                    android:id="@+id/cancel_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/margin_nano"
+                    android:padding="@dimen/padding_micro"
+                    android:src="@drawable/remove_thumb"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.3dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/margin_nano"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_extra"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_ultimate_plus"
+                android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+                android:elevation="@dimen/highElevation"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/send"
+                android:textColor="@color/md_white_1000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_forget_password" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

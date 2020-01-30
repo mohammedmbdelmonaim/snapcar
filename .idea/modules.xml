@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/snap-car-android.iml" filepath="$PROJECT_DIR$/.idea/snap-car-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snap_car/snap_car.iml" filepath="$PROJECT_DIR$/snap_car/snap_car.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/snapcarـandroid.iml" filepath="$PROJECT_DIR$/.idea/snapcarـandroid.iml" />
+    </modules>
+  </component>
+</project>

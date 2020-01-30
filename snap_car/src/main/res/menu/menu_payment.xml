@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_all"
+        android:title="@string/show_al"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/full_payment"
+        android:title="@string/full_payment"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/installment"
+        android:title="@string/installmentss"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/transfer"
+        android:title="@string/undetermined"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/big_sale"
+        android:title="@string/big_sale"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/exchange"
+        android:title="@string/exchange"
+        app:showAsAction="ifRoom" />
+
+</menu>

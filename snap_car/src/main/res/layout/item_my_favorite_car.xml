@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_micro"
+    android:background="@drawable/shape_rounded_corner_whete_rectangle"
+    android:elevation="2dp">
+
+    <ImageView
+        android:id="@+id/image_car"
+        android:layout_width="109dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/car_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:textColor="#FF505050"
+        android:textSize="@dimen/textSizeText"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toStartOf="@id/fav_ic"
+        app:layout_constraintStart_toEndOf="@id/image_car"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2017 Toyota Camry XSE" />
+
+    <TextView
+        android:id="@+id/car_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorRed"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/car_name"
+        app:layout_constraintTop_toBottomOf="@id/car_name"
+        app:layout_constraintVertical_bias="0"
+        tools:text="143,000 SAR"
+        />
+
+    <TextView
+        android:id="@+id/car_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/car_price"
+        app:layout_constraintBottom_toBottomOf="@id/car_price"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@id/car_price"
+        app:layout_constraintVertical_bias="0"
+        tools:text="175,000 SAR" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toStartOf="@id/examinationImage"
+        app:layout_constraintStart_toStartOf="@+id/car_name"
+        app:layout_constraintTop_toBottomOf="@id/car_price"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/car_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/calendar"
+            android:drawablePadding="@dimen/margin_nano"
+            android:textSize="8sp"
+            tools:text="2014" />
+
+        <TextView
+            android:id="@+id/car_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/paintbrush"
+            android:drawablePadding="@dimen/margin_nano"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="selver"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/car_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/map_marker"
+            android:drawablePadding="@dimen/margin_nano"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Gda"
+            android:textSize="8sp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/car_races"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/margin_nano"
+            android:drawableStart="@drawable/races"
+            android:textSize="8sp"
+            tools:text="103K" />
+
+        <TextView
+            android:id="@+id/car_importer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/margin_nano"
+            android:drawableStart="@drawable/pallet"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="8sp"
+
+            tools:text="Gulf" />
+
+        <TextView
+            android:id="@+id/car_gear_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/margin_nano"
+            android:drawableStart="@drawable/gearshift"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="8sp"
+
+            tools:text="Auto" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fav_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:padding="@dimen/padding_micro"
+        android:src="@drawable/favorite_material"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/car_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/examinationImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/verified_user_material"
+        android:text="Examined"
+        android:textSize="11sp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fav_ic" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

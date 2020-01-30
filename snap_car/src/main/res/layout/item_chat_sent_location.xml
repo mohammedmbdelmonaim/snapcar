@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user"
+        android:layout_width="@dimen/sizeAvatarChat"
+        android:layout_height="@dimen/sizeAvatarChat"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="1dp"
+        tools:src="@drawable/block_user__material" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin_ultimate_triple"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:orientation="vertical">
+
+        <com.jcminarro.roundkornerlayout.RoundKornerFrameLayout
+            android:id="@+id/iv_photo"
+            android:layout_width="230dp"
+            android:layout_height="150dp"
+            app:corner_radius="10dp">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:autoLink="map"
+                android:background="@color/colorTextSecondary"
+                android:gravity="start"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/colorTextPrimaryLight"
+                android:textColorLink="@color/colorTextPrimaryLight"
+                android:textSize="@dimen/textSizeSubtext1"
+                tools:message="2458 Prospecti kso skslkow kfoe" />
+        </com.jcminarro.roundkornerlayout.RoundKornerFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/textSizeSubtext1"
+            tools:text="Sending..."
+            tools:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

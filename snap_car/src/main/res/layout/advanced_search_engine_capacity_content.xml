@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_engine_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:paddingEnd="@dimen/padding_micro"
+        android:paddingStart="@dimen/padding_micro"
+        android:textColorHint="@color/colorHintInterest">
+
+        <com.intcore.snapcar.core.widget.rxedittext.RxEditText
+            android:id="@+id/et_engine_capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorTextPrimary"
+            android:drawableEnd="@drawable/keyboard_arrow_down_material"
+            android:drawablePadding="@dimen/padding_micro"
+            android:focusable="false"
+            android:hint="@string/engine_capacity"
+            android:textColorHint="@color/colorHintInterest"
+            android:textSize="@dimen/textSizeText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

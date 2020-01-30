@@ -1,0 +1,101 @@
+apply plugin: 'com.android.library'
+//apply from: "$project.rootDir/tools/gradle/script/git-version.gradle"
+apply from: "$project.rootDir/tools/gradle/script/quality.gradle"
+apply from: "$project.rootDir/tools/gradle/script/java-code-coverage.gradle"
+
+android {
+    compileSdkVersion deps.build.compileSdkVersion
+    buildToolsVersion deps.build.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion deps.build.minSdkVersion
+        targetSdkVersion deps.build.targetSdkVersion
+        versionCode deps.build.versionCode
+        versionName deps.build.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), "$project.rootDir/tools/proguard/rules-proguard.pro"
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), "$project.rootDir/tools/proguard/rules-proguard-debug.pro"
+        }
+    }
+
+    lintOptions {
+        disable 'TypographyFractions', 'TypographyQuotes'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Android
+    implementation deps.support.design
+    implementation deps.support.cardview
+    api deps.support.constraintLayout
+    implementation deps.view.circleimageview
+
+    //Social SDKs
+    implementation deps.social.facebook
+    implementation deps.social.twitter
+    implementation deps.social.googleauth
+    implementation deps.social.googleauthservice
+
+    // Arch Component
+    implementation deps.architectureComponents.lifecycles
+    implementation deps.architectureComponents.room
+    annotationProcessor deps.architectureComponents.roomcompiler
+
+    // GooglePlayServices
+    implementation deps.googlePlayServices.places
+
+    // Images
+    implementation deps.image.glide
+    annotationProcessor deps.image.glideCompiler
+
+    // Rx
+    implementation deps.rx.java
+    implementation deps.rx.relay
+    implementation deps.rx.android
+    implementation deps.rx.binding
+    implementation deps.rx.networkStatus
+    implementation deps.rx.retrofitAdapter
+
+    // Network
+    implementation deps.network.retrofit
+    implementation deps.network.retrofitGsonConverter
+
+    // Dependency Injection
+    implementation deps.dependencyInjection.dagger
+    implementation deps.dependencyInjection.daggerSupportAndroid
+    annotationProcessor deps.dependencyInjection.daggerCompiler
+    annotationProcessor deps.dependencyInjection.daggerAndroidCompiler
+
+    // Log
+    implementation deps.log.timber
+
+    // Testing
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.runner
+    androidTestImplementation deps.test.espresso
+
+}
+apply plugin: 'com.google.gms.google-services'

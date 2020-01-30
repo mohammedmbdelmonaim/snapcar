@@ -1,0 +1,1954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorLayoutBackground"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/padding"
+            android:src="@drawable/chevron_left_material" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/add_car"
+            android:textColor="@color/colorTextPrimary" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/bg_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/margin_nano">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/margin_nano"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/directions_car_sec" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/margin_micro"
+                    android:layout_marginStart="@dimen/margin_micro"
+                    android:text="@string/car_details"
+                    android:textSize="@dimen/textSizeTitle"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_photes_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_image_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/add_car_photos"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/add_image_cell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/right_cell" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/brand_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_brand_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/select_brand"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/models_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_model_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/model"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/categ_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_categ_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/category"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manu_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_man_year_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/manufacturing_year"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/color_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_color_year_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/car_color"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/transmission_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_transmission_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/transmission_type"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_transmission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/importer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_importer_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/importer"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_importer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_kilometers_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/kilometers"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_micro"
+                    android:layout_marginStart="@dimen/margin_micro">
+
+                    <EditText
+                        android:id="@+id/ed_km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_ultimate_triple_plus"
+                        android:hint="000000000"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/textSizeText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/km"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/textSizeText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_nano"
+                    android:background="@color/colorDivider" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/engine_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_engine_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/engine_capacity"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_micro"
+                    android:layout_marginStart="@dimen/margin_micro">
+
+                    <EditText
+                        android:id="@+id/ed_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="00000"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/textSizeText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/CC"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/textSizeSubtext1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/conditions_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_condtion_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/condition"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/warranty_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="20dp"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circle_warranty_selected"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@color/colorAddCarCircles" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/margin_micro"
+                            android:layout_marginStart="@dimen/margin_micro"
+                            android:text="@string/warranty"
+                            android:textSize="@dimen/textSizeText"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/agent_name_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/ss"
+                        android:layout_marginEnd="@dimen/margin_ultra"
+                        android:layout_marginStart="@dimen/margin_ultra"
+                        android:layout_marginTop="@dimen/margin_nano"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_nano"
+                            android:layout_marginStart="@dimen/margin_nano"
+                            android:text="@string/warranty_period" />
+
+                        <EditText
+                            android:id="@+id/agent_name_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="100"
+                            android:layout_marginEnd="@dimen/margin_micro"
+                            android:layout_marginStart="@dimen/margin_micro"
+                            android:inputType="text" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <View
+                    android:id="@+id/ss"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_ultra"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/examinationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin_nano">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_examination_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/examination_file"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/examination_divider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/im_examination_one"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/examinationUploaded_one"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/margin_nano"
+                            android:clickable="false"
+                            android:padding="@dimen/padding"
+                            android:scaleType="center"
+                            android:src="@drawable/remove_thumb" />
+
+                        <ImageView
+                            android:id="@+id/imageCancel_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="5dp"
+                            android:src="@drawable/remove_thumb"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/im_examination_two"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/examinationUploaded_two"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/margin_nano"
+                            android:clickable="false"
+                            android:padding="@dimen/padding"
+                            android:scaleType="center"
+                            android:src="@drawable/remove_thumb" />
+
+                        <ImageView
+                            android:id="@+id/imageCancel_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="5dp"
+                            android:src="@drawable/remove_thumb"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/im_examination_three"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/examinationUploaded_three"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/margin_nano"
+                            android:clickable="false"
+                            android:padding="@dimen/padding"
+                            android:scaleType="center"
+                            android:src="@drawable/remove_thumb" />
+
+                        <ImageView
+                            android:id="@+id/imageCancel_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="5dp"
+                            android:src="@drawable/remove_thumb"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/add_examination_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:padding="@dimen/padding_nano"
+                        android:src="@drawable/add_circle_green" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/examination_divider"
+                    android:layout_marginBottom="@dimen/margin_nano"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_nano"
+                    android:text="@string/examination_limite"
+
+                    android:textColor="#696969"
+                    android:textSize="13sp" />
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/margin_extra"
+                    android:layout_marginStart="@dimen/margin_extra"
+                    android:text="@string/mvpi"
+                    android:textSize="@dimen/textSizeText"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_nano"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/margin_extra"
+                    android:layout_marginStart="@dimen/margin_extra"
+                    android:text="@string/vehicle_registration"
+                    android:textSize="@dimen/textSizeText"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_nano"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/padding_micro"
+                android:background="@color/bg_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_nano"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_extra"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/priceIsSelected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/monetization_on_material" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/price_details"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="@dimen/margin_extra"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <RadioButton
+                                android:id="@+id/radio1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorGreen"
+                                android:checked="true"
+                                android:text="@string/fixed_price" />
+
+                            <RadioButton
+                                android:id="@+id/radio2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_nano"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorGreen"
+                                android:text="@string/undetermined" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_micro"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/colorGreen"
+                                android:text="@string/installment" />
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <RadioButton
+                                    android:id="@+id/radio3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_micro"
+                                    android:buttonTint="@color/colorGreen"
+                                    android:text="@string/exchange" />
+
+                                <RadioButton
+                                    android:id="@+id/radio4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/margin_nano"
+                                    android:buttonTint="@color/colorGreen"
+                                    android:text="@string/discount_price" />
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_nano"
+                            android:layout_marginTop="@dimen/margin_nano">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/priceTypingLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/margin_nano"
+                                    android:layout_marginRight="@dimen/margin_nano"
+                                    android:hint="@string/car_price"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:textColor="@color/colorRed" />
+                            </LinearLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/discountLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible">
+
+                                <TextView
+                                    android:id="@+id/tv_dis_from"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginStart="12dp"
+                                    android:text="@string/discount_before"
+                                    android:textSize="@dimen/textSizeText"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/et_dis_from"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <EditText
+                                    android:id="@+id/et_dis_from"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/textSizeText"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_dis_from"
+                                    app:layout_constraintEnd_toStartOf="@id/tv_diss_from"
+                                    app:layout_constraintStart_toEndOf="@id/tv_dis_from"
+                                    app:layout_constraintTop_toTopOf="@id/tv_dis_from" />
+
+                                <TextView
+                                    android:id="@+id/tv_diss_from"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/textSizeSubtext1"
+                                    app:layout_constraintBottom_toBottomOf="@id/et_dis_from"
+                                    app:layout_constraintEnd_toStartOf="@id/tv_dis_to"
+                                    app:layout_constraintStart_toEndOf="@id/et_dis_from"
+                                    app:layout_constraintTop_toTopOf="@id/et_dis_from" />
+
+                                <TextView
+                                    android:id="@+id/tv_dis_to"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_micro"
+                                    android:text="@string/after"
+                                    android:textSize="@dimen/textSizeText"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_dis_from"
+                                    app:layout_constraintEnd_toStartOf="@id/et_dis_to"
+                                    app:layout_constraintStart_toEndOf="@id/tv_diss_from"
+                                    app:layout_constraintTop_toTopOf="@id/tv_dis_from" />
+
+                                <EditText
+                                    android:id="@+id/et_dis_to"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/textSizeText"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_dis_from"
+                                    app:layout_constraintEnd_toStartOf="@id/tv_diss_to"
+                                    app:layout_constraintStart_toEndOf="@id/tv_dis_to"
+                                    app:layout_constraintTop_toTopOf="@id/tv_dis_from" />
+
+                                <TextView
+                                    android:id="@+id/tv_diss_to"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="12dp"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/textSizeSubtext1"
+                                    app:layout_constraintBottom_toBottomOf="@id/et_dis_to"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/et_dis_to"
+                                    app:layout_constraintTop_toTopOf="@id/et_dis_to" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/installmentLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible">
+
+                                <TextView
+                                    android:id="@+id/tv_install_from"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginStart="12dp"
+                                    android:text="@string/pricee"
+                                    android:textSize="@dimen/textSizeText"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/et_install_from"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <EditText
+                                    android:id="@+id/et_install_from"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/textSizeText"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_install_from"
+                                    app:layout_constraintEnd_toStartOf="@id/tv_installl_from"
+                                    app:layout_constraintStart_toEndOf="@id/tv_install_from"
+                                    app:layout_constraintTop_toTopOf="@id/tv_install_from" />
+
+                                <TextView
+                                    android:id="@+id/tv_installl_from"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/textSizeSubtext1"
+                                    app:layout_constraintBottom_toBottomOf="@id/et_install_from"
+                                    app:layout_constraintEnd_toStartOf="@id/tv_install_to"
+                                    app:layout_constraintStart_toEndOf="@id/et_install_from"
+                                    app:layout_constraintTop_toTopOf="@id/et_install_from" />
+
+                                <TextView
+                                    android:id="@+id/tv_install_to"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_micro"
+                                    android:text="@string/monthely"
+                                    android:textSize="@dimen/textSizeText"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_install_from"
+                                    app:layout_constraintEnd_toStartOf="@id/et_install_to"
+                                    app:layout_constraintStart_toEndOf="@id/tv_installl_from"
+                                    app:layout_constraintTop_toTopOf="@id/tv_install_from" />
+
+                                <EditText
+                                    android:id="@+id/et_install_to"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="7"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/textSizeText"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_install_from"
+                                    app:layout_constraintEnd_toStartOf="@id/tv_installl_to"
+                                    app:layout_constraintStart_toEndOf="@id/tv_install_to"
+                                    app:layout_constraintTop_toTopOf="@id/tv_install_from" />
+
+                                <TextView
+                                    android:id="@+id/tv_installl_to"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="12dp"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/textSizeSubtext1"
+                                    app:layout_constraintBottom_toBottomOf="@id/et_install_to"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/et_install_to"
+                                    app:layout_constraintTop_toTopOf="@id/et_install_to" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/padding_micro"
+                android:background="@color/bg_gray" />
+
+            <LinearLayout
+                android:id="@+id/map_options_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nano"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_extra"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/location_on_materialsmall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/map_view_location"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/tracked_car_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_micro"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/margin_micro"
+                            android:layout_marginStart="@dimen/margin_micro"
+                            android:text="@string/tracked_car"
+                            android:textSize="@dimen/textSizeText"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/margin_nano"
+                            android:theme="@style/SCBSwitch" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_micro"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/margin_micro"
+                            android:layout_marginStart="@dimen/margin_micro"
+                            android:text="@string/fixed_location_on_map"
+                            android:textSize="@dimen/textSizeText"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/margin_nano"
+                            android:theme="@style/SCBSwitch" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_micro"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/margin_micro"
+                            android:layout_marginStart="@dimen/margin_micro"
+                            android:text="@string/fixed_location"
+                            android:textSize="@dimen/textSizeText"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/margin_nano"
+                            android:theme="@style/SCBSwitch" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sw3"
+                            android:layout_marginBottom="@dimen/margin_nano"
+                            android:layout_marginEnd="@dimen/margin_micro"
+                            android:layout_marginStart="@dimen/margin_micro"
+                            android:layout_marginTop="@dimen/margin_nano"
+                            android:textColor="@color/colorRed"
+                            android:text="@string/fixed_location_hint"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/pickLocationLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:visibility="gone">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/circle_location_picked"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@color/colorAddCarCircles" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/margin_micro"
+                                android:layout_marginEnd="@dimen/margin_micro"
+                                android:text="@string/location"
+                                android:textSize="@dimen/textSizeText"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/location_cell"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/margin_nano"
+                            android:src="@drawable/right_cell" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/colorDivider" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/pickLocationOnMapLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/circle_location_picked_on_map"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@color/colorAddCarCircles" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/margin_micro"
+                                android:layout_marginEnd="@dimen/margin_micro"
+                                android:text="@string/location"
+                                android:textSize="@dimen/textSizeText"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/location_on_map_cell"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/margin_nano"
+                            android:src="@drawable/right_cell" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/colorDivider" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/map_options_divider"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/padding_micro"
+                android:background="@color/bg_gray"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_nano"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_extra"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/perm_contact_cale" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/contact_options"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_micro"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_extra"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_micro"
+                            android:text="@string/phone_calling"
+                            android:textSize="@dimen/textSizeText"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/margin_nano"
+                            android:theme="@style/SCBSwitch" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_micro"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/margin_micro"
+                            android:text="@string/chat"
+                            android:textSize="@dimen/textSizeText"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/margin_nano"
+                            android:checked="true"
+                            android:theme="@style/SCBSwitch" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/padding_micro"
+                android:background="@color/bg_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nano"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_extra"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/calendar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/notes"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/notesEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:hint="@string/type_your_notes"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:maxLength="300"
+                    android:overScrollMode="always"
+                    android:scrollHorizontally="false"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:id="@+id/tv_note_counter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="end"
+                    android:text="300"
+                    android:textColor="@color/colorTextSecondary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/padding_micro"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:id="@+id/post_layout"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_post_selected"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@color/colorAddCarCircles" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/margin_micro"
+                        android:layout_marginStart="@dimen/margin_micro"
+                        android:text="@string/post_type"
+                        android:textSize="@dimen/textSizeText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_nano"
+                        android:layout_marginStart="@dimen/margin_nano"
+                        android:text="*"
+                        android:textColor="@color/colorRed" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/iv_selected_post_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_ultimate"
+                    android:layout_marginStart="@dimen/margin_ultimate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/big_down" />
+
+                <TextView
+                    android:id="@+id/tv_premiumPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/post_type_divider"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin_micro"
+                    android:text="@string/distinguish_your_car_advertising_by_choosing_your_advertising_feature_and_paying_sr100"
+                    android:textColor="@color/colorRed" />
+
+                <View
+                    android:id="@+id/post_type_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorDivider" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/padding_micro"
+                android:background="@color/bg_gray" />
+
+            <TextView
+                android:id="@+id/btn_publish_car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_extra"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+                android:elevation="@dimen/highElevation"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/publish_car"
+                android:textColor="@color/md_white_1000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_forget_password" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

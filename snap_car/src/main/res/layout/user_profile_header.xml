@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_user_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:padding="@dimen/padding"
+        android:src="@drawable/back_left"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageView
+        android:id="@+id/image_cover"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginBottom="8dp"
+        android:background="#c7dcdee3"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#acdcdee3"
+        app:layout_constraintBottom_toBottomOf="@id/image_cover"
+        app:layout_constraintEnd_toEndOf="@id/image_cover"
+        app:layout_constraintStart_toStartOf="@id/image_cover"
+        app:layout_constraintTop_toTopOf="@id/image_cover" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_profile"
+        app:layout_constraintBottom_toTopOf="@id/border_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/border_gradient"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/border_gradient"
+        app:layout_constraintBottom_toTopOf="@id/tv_user_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_cover"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_avatar"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="@drawable/border_gradient"
+        android:src="@drawable/guest_avatar_ic"
+        app:layout_constraintBottom_toBottomOf="@id/border_gradient"
+        app:layout_constraintEnd_toEndOf="@id/border_gradient"
+        app:layout_constraintStart_toStartOf="@id/border_gradient"
+        app:layout_constraintTop_toTopOf="@id/border_gradient" />
+
+    <ImageView
+        android:id="@+id/image_edit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="@dimen/padding_micro"
+        android:src="@drawable/edit_hi_res_512"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/border_gradient"
+        tools:text="Manar Mustapha ;)" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/mail_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        tools:text="Saudi Arabia - Riyadh" />
+
+    <LinearLayout
+        android:id="@+id/mail_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_address"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_micro"
+            android:layout_marginEnd="@dimen/margin_micro"
+            android:layout_marginStart="@dimen/margin_micro"
+            android:textStyle="bold"
+            tools:text="+2132413413413" />
+
+        <TextView
+            android:id="@+id/tv_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_micro"
+            android:layout_marginEnd="@dimen/margin_micro"
+            android:layout_marginStart="@dimen/margin_micro"
+            android:textStyle="bold"
+            tools:text="Mail2Website.com" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_user_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:background="@drawable/shape_rounded_corner_gradient_low_radius"
+        android:elevation="@dimen/highElevation"
+        android:paddingBottom="@dimen/padding_micro"
+        android:paddingEnd="@dimen/padding"
+        android:paddingStart="@dimen/padding"
+        android:paddingTop="@dimen/padding_micro"
+        android:text="Cars available for sell     75"
+        android:textColor="@color/md_white_1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mail_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

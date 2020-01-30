@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/header_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/action_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/user_header"
+                    layout="@layout/user_profile_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible" />
+
+                <include
+                    android:id="@+id/show_room_header"
+                    layout="@layout/show_room_profile_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/action_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header_container">
+
+                <TextView
+                    android:id="@+id/tv_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rounded_corner_blue_rectangle"
+                    android:drawablePadding="1dp"
+                    android:drawableStart="@drawable/chat_bubble_material"
+                    android:drawableTint="@color/colorwhete"
+                    android:elevation="@dimen/highElevation"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding_micro"
+                    android:paddingEnd="@dimen/padding"
+                    android:paddingStart="@dimen/padding"
+                    android:paddingTop="@dimen/padding_micro"
+                    android:text="@string/start_chat"
+                    android:textColor="@color/md_white_1000" />
+
+                <TextView
+                    android:id="@+id/tv_block"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_rounded_corner_grey_rectangle"
+                    android:drawablePadding="@dimen/padding_nano"
+                    android:drawableStart="@drawable/block_material"
+                    android:drawableTint="@color/colorwhete"
+                    android:elevation="@dimen/highElevation"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding_micro"
+                    android:paddingEnd="@dimen/padding"
+                    android:paddingStart="@dimen/padding"
+                    android:paddingTop="@dimen/padding_micro"
+                    android:text="@string/block_member"
+                    android:textColor="@color/md_white_1000"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_chat"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_chat"
+                    app:layout_constraintTop_toTopOf="@id/tv_chat" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@drawable/dotted_line"
+                android:layerType="software"
+                app:layout_constraintBottom_toTopOf="@id/tv_name_cars"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/action_container" />
+
+            <TextView
+                android:id="@+id/tv_name_cars"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin_extra"
+                android:layout_marginStart="@dimen/margin_extra"
+                android:layout_marginTop="@dimen/margin"
+                android:gravity="start"
+                android:text="@string/cars"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/options_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/options_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:layoutDirection="ltr"
+                app:layout_constraintBottom_toTopOf="@id/et_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name_cars">
+
+                <TextView
+                    android:id="@+id/tv_available"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:layout_marginStart="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_available_button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding_micro"
+                    android:paddingTop="@dimen/padding_micro"
+                    android:text="@string/available"
+                    android:textColor="@drawable/selector_button_text_color"
+                    android:textSize="@dimen/textSizeText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_sold"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_sold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_sold_button"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding_micro"
+                    android:paddingTop="@dimen/padding_micro"
+                    android:text="@string/sold"
+                    android:textColor="@drawable/selector_button_text_color"
+                    android:textSize="@dimen/textSizeText"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_available"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.intcore.snapcar.core.widget.rxedittext.RxEditText
+                android:id="@+id/et_search"
+                style="@style/SearchEditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:clickable="false"
+                android:drawableEnd="@drawable/ic_search_black_24dp"
+                android:focusable="false"
+                android:hint="@string/search"
+                android:inputType="textAutoComplete"
+                app:layout_constraintBottom_toTopOf="@id/rv_cars"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/options_container" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cars"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_search" />
+
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/no_cars_found"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/textSizeTitle"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/rv_cars"
+                app:layout_constraintEnd_toEndOf="@id/rv_cars"
+                app:layout_constraintStart_toStartOf="@id/rv_cars"
+                app:layout_constraintTop_toTopOf="@id/rv_cars"
+                app:layout_constraintVertical_bias="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/block_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/md_white_1000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/com_facebook_close"
+            android:text="@string/this_person_is_not_available_now" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

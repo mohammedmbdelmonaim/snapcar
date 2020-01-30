@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/filter_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_corner_white_rectangle"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/sort_by"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/textSizeTitle"
+            android:textStyle="bold" />
+
+        <include layout="@layout/filter_brand_content" />
+
+        <include layout="@layout/filter_show_all_content" />
+
+        <include layout="@layout/filter_men_car_content" />
+
+        <include layout="@layout/filter_women_car_content" />
+
+        <include layout="@layout/filter_damaged_car_content" />
+
+        <include layout="@layout/filter_showroom_content" />
+
+        <include layout="@layout/filter_vip_showroom_content" />
+
+        <include layout="@layout/filter_hotzone_content" />
+
+        <include layout="@layout/filter_vip_hotzone_content" />
+
+        <TextView
+            android:id="@+id/tv_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+            android:gravity="center"
+            android:padding="@dimen/padding_micro"
+            android:text="@string/apply"
+            android:textAllCaps="true"
+            android:textColor="@color/md_white_1000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/filter_container"
+        android:layout_alignEnd="@id/filter_container"
+        android:layout_alignStart="@id/filter_container"
+        android:layout_alignTop="@id/filter_container"
+        android:background="@color/transparent_black"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</RelativeLayout>

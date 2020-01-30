@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rounded_corner_white_rectangle">
+
+    <ImageView
+        android:id="@+id/iv_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:src="@drawable/warning_small"
+        app:layout_constraintBottom_toTopOf="@id/tv_warning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/you_must_login_first"
+        android:gravity="center"
+        android:textColor="@color/colorTextPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_warning" />
+
+    <LinearLayout
+        android:id="@+id/action_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_warning">
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_micro"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_micro"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+            android:elevation="@dimen/highElevation"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_micro"
+            android:paddingEnd="@dimen/padding_ultra"
+            android:paddingStart="@dimen/padding_ultra"
+            android:paddingTop="@dimen/padding_micro"
+            android:text="@string/log_inn"
+            android:textColor="@color/md_white_1000" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_micro"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_micro"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corner_grey_rectangle"
+            android:elevation="@dimen/highElevation"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_micro"
+            android:paddingEnd="@dimen/padding_ultra"
+            android:paddingStart="@dimen/padding_ultra"
+            android:paddingTop="@dimen/padding_micro"
+            android:text="@string/cancel"
+            android:textColor="@color/md_white_1000" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

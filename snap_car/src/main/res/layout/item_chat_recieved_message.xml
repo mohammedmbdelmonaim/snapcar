@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user"
+        android:layout_width="@dimen/sizeAvatarChat"
+        android:layout_height="@dimen/sizeAvatarChat"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:src="@drawable/block_user__material"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="1dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin_ultimate_triple"
+        android:layout_marginTop="@dimen/margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_nano"
+            android:layout_marginTop="@dimen/margin"
+            android:autoLink="all"
+            android:background="@drawable/shape_recieved_chat_bubble"
+            android:lineSpacingExtra="@dimen/margin_nano"
+            android:padding="@dimen/padding_micro"
+            android:textColor="@drawable/selector_chat_text"
+            android:textIsSelectable="true"
+            tools:text=" gggggggggggggggggggggggg" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/textSizeSubtext1"
+            tools:text="Sending..."
+            tools:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorLayoutBackground">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding"
+                    android:src="@drawable/chevron_left_material" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/contact_us"
+                    android:textColor="@color/colorTextPrimary" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:src="@drawable/contact_book" />
+
+            <include layout="@layout/contact_email_content" />
+
+            <include layout="@layout/contact_name_content" />
+
+            <include layout="@layout/contact_message_content" />
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+                android:gravity="center"
+                android:padding="@dimen/padding_micro"
+                android:text="@string/send"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@drawable/dotted_line"
+                android:layerType="software" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:gravity="start"
+                android:text="@string/a_motors_contact_info"
+                android:textColor="@color/colorTextSecondary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:drawablePadding="@dimen/drawablePadding"
+                android:drawableStart="@drawable/mail_materialbig"
+                android:gravity="start|center"
+                android:textColor="@color/colorTextSecondary"
+                android:textStyle="bold"
+                tools:text="Mail@WebSite.com" />
+
+            <TextView
+                android:id="@+id/tv_phones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:drawablePadding="@dimen/drawablePadding"
+                android:drawableStart="@drawable/phone_android_material"
+                android:gravity="start|center"
+                android:textColor="@color/colorTextSecondary"
+                android:textStyle="bold"
+                tools:text="+966473838489984" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_ultra"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:drawablePadding="@dimen/drawablePadding"
+                android:drawableStart="@drawable/location_on__"
+                android:gravity="start|center"
+                android:textColor="@color/colorTextSecondary"
+                android:textStyle="bold"
+                tools:text="+966473838489984" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

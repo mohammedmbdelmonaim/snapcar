@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.addinterest.AddInterestActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorLayoutBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:src="@drawable/chevron_left_material" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/edit_interest"
+            android:textColor="@color/colorTextPrimary" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/interest_model_brand_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin" />
+
+            <include layout="@layout/interest_gear_content" />
+
+            <include layout="@layout/interest_color_content" />
+
+            <include layout="@layout/interest_km_content" />
+
+            <include layout="@layout/interest_condition_content" />
+
+            <include layout="@layout/interest_seller_content" />
+
+            <!--<include layout="@layout/interest_category_content" />-->
+
+            <include layout="@layout/interest_year_content" />
+
+            <include layout="@layout/interest_price_content" />
+
+            <!--<include layout="@layout/interest_type_content" />-->
+
+            <!--<include layout="@layout/interest_gender_content" />-->
+
+            <include layout="@layout/interest_payment_content" />
+
+
+
+            <include layout="@layout/interest_importer_content" />
+
+            <include layout="@layout/interest_country_city_content" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_nearby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:paddingStart="@dimen/padding"
+                android:text="@string/nearby"
+                android:textColor="@color/colorTextPrimary" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_vachel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:paddingStart="@dimen/padding"
+                android:paddingTop="@dimen/padding_micro"
+                android:text="@string/vachel_registeration"
+                android:textColor="@color/colorTextPrimary" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_mvpi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:paddingStart="@dimen/padding"
+                android:text="@string/mvpi"
+                android:textColor="@color/colorTextPrimary" />
+
+
+            <!--<android.support.v7.widget.SwitchCompat-->
+                <!--android:id="@+id/switch_sale"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingBottom="@dimen/padding"-->
+                <!--android:paddingEnd="@dimen/padding"-->
+                <!--android:paddingStart="@dimen/padding"-->
+                <!--android:text="@string/big_sale_and_discount"-->
+                <!--android:textColor="@color/colorTextPrimary" />-->
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:background="@drawable/shape_green_rounded_rectangle"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:gravity="center"
+                android:padding="@dimen/padding_micro"
+                android:text="@string/update"
+                android:textColor="@color/md_white_1000" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

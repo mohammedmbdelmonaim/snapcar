@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginStart="@dimen/margin"
+    android:background="@drawable/shape_rounded_corner_red_rectangle"
+    android:elevation="@dimen/cardview_default_elevation">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:drawableTop="@drawable/delete_forever_materialbox"
+        android:text="@string/delete"
+        android:textColor="@color/tw__solid_white"
+        android:textSize="@dimen/textSizeText"
+        app:layout_constraintBottom_toBottomOf="@id/view_forground"
+        app:layout_constraintStart_toStartOf="@id/view_forground"
+        app:layout_constraintTop_toTopOf="@id/view_forground" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_forground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_search_edit_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/border_gradient"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="@dimen/margin_micro"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_micro"
+            android:background="@drawable/border_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_interest"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            app:layout_constraintBottom_toBottomOf="@id/border_gradient"
+            app:layout_constraintEnd_toEndOf="@id/border_gradient"
+            app:layout_constraintStart_toStartOf="@id/border_gradient"
+            app:layout_constraintTop_toTopOf="@id/border_gradient"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin"
+            android:drawableEnd="@drawable/chevron_right_material"
+            android:drawablePadding="@dimen/drawablePadding"
+            android:gravity="center|start"
+            android:text="Toyta"
+            app:layout_constraintBottom_toBottomOf="@id/border_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/border_gradient"
+            app:layout_constraintTop_toTopOf="@id/border_gradient" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

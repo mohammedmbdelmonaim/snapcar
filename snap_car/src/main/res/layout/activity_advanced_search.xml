@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.advancedsearch.AdvancedSearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorLayoutBackground"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:src="@drawable/chevron_left_material" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/searchh"
+            android:textColor="@color/colorTextPrimary" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin"
+                android:src="@drawable/analytics" />
+
+            <include layout="@layout/basic_search_model_brand_content" />
+
+            <include layout="@layout/interest_gear_content" />
+
+            <include layout="@layout/interest_color_content" />
+
+            <include layout="@layout/interest_km_content" />
+
+            <include layout="@layout/advanced_search_engine_capacity_content" />
+
+            <include layout="@layout/interest_condition_content" />
+
+            <include layout="@layout/advanced_search_warranty_content" />
+
+            <include layout="@layout/interest_seller_content" />
+
+            <include layout="@layout/interest_tracked_content" />
+
+            <include layout="@layout/interest_post_type_content" />
+
+            <include layout="@layout/basic_search_year_content" />
+
+            <include layout="@layout/basic_search_price_layout" />
+
+            <include layout="@layout/basic_search_installment_layout" />
+
+            <include layout="@layout/basic_search_big_sale_layout" />
+
+            <include layout="@layout/basic_search_near_by_layout" />
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding_micro"
+                android:paddingTop="@dimen/padding_micro"
+                android:text="@string/search"
+                android:textColor="@color/md_white_1000" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

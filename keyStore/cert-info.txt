@@ -1,0 +1,2 @@
+Alias = key0
+Pass = 123456

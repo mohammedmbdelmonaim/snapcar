@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    android:background="@drawable/background_search_edit_text"
+    android:elevation="@dimen/cardview_default_elevation">
+
+    <ImageView
+        android:id="@+id/iv_near_by"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:scaleType="centerCrop"
+        android:src="@color/light_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1.2"
+        app:layout_constraintEnd_toStartOf="@id/tv_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/textSizeText"
+        app:layout_constraintBottom_toTopOf="@id/tv_price"
+        app:layout_constraintEnd_toStartOf="@id/iv_fav"
+        app:layout_constraintStart_toEndOf="@id/iv_near_by"
+        app:layout_constraintTop_toTopOf="@id/iv_near_by"
+        tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+
+    <ImageView
+        android:id="@+id/iv_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin"
+        android:src="@drawable/selector_favorite"
+        app:layout_constraintBottom_toBottomOf="@id/tv_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_description"
+        app:layout_constraintTop_toTopOf="@id/tv_description" />
+
+    <ProgressBar
+        android:id="@+id/fav_progress_bar"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fav"
+        app:layout_constraintEnd_toEndOf="@id/iv_fav"
+        app:layout_constraintStart_toStartOf="@id/iv_fav"
+        app:layout_constraintTop_toTopOf="@id/iv_fav" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_nano"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@id/first_row_container"
+        app:layout_constraintEnd_toStartOf="@id/tv_price_before"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/tv_description"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
+        tools:text="143,000 SAR" />
+
+    <TextView
+        android:id="@+id/tv_price_before"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeSubText2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_price"
+        app:layout_constraintTop_toTopOf="@id/tv_price"
+        tools:text="23333" />
+
+    <TextView
+        android:id="@+id/tv_price_monthly"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorYellow"
+        android:textSize="@dimen/textSizeSubText2"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_price_before"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_price_before"
+        app:layout_constraintTop_toTopOf="@id/tv_price_before"
+        tools:text="23333" />
+
+    <LinearLayout
+        android:id="@+id/first_row_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_micro"
+        app:layout_constraintBottom_toTopOf="@id/second_row_container"
+        app:layout_constraintEnd_toStartOf="@id/tv_verify"
+        app:layout_constraintStart_toStartOf="@id/tv_description"
+        app:layout_constraintTop_toBottomOf="@id/tv_price">
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding_nano"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:drawableStart="@drawable/calendar"
+            android:textSize="@dimen/textSizeSubText2"
+            tools:text="2014" />
+
+        <TextView
+            android:id="@+id/tv_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding_nano"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:drawableStart="@drawable/paintbrush"
+            android:textSize="@dimen/textSizeSubText2"
+            tools:text="Silver" />
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding_nano"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:drawableStart="@drawable/map_marker"
+            android:textSize="@dimen/textSizeSubText2"
+            tools:text="Gedah" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:background="@drawable/shape_rectangle_green_background"
+        android:drawableStart="@drawable/verified_whit"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:gravity="center"
+        android:paddingBottom="@dimen/padding_nano"
+        android:paddingEnd="@dimen/padding_nano"
+        android:paddingStart="@dimen/padding_nano"
+        android:paddingTop="@dimen/padding_nano"
+        android:textColor="@color/md_white_1000"
+        android:textSize="6sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/second_row_container"
+        app:layout_constraintTop_toTopOf="@id/iv_near_by"
+        app:layout_constraintVertical_bias="1" />
+
+    <LinearLayout
+        android:id="@+id/second_row_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_micro"
+        app:layout_constraintBottom_toBottomOf="@id/iv_near_by"
+        app:layout_constraintEnd_toStartOf="@id/tv_verify"
+        app:layout_constraintStart_toStartOf="@id/tv_description"
+        app:layout_constraintTop_toBottomOf="@id/first_row_container">
+
+        <TextView
+            android:id="@+id/tv_km"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding_nano"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:drawableStart="@drawable/races"
+            android:textSize="@dimen/textSizeSubText2"
+            tools:text="2014" />
+
+        <TextView
+            android:id="@+id/tv_specification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_nano"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding_nano"
+            android:drawableStart="@drawable/pallet"
+            android:textSize="@dimen/textSizeSubText2"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Silver" />
+
+        <TextView
+            android:id="@+id/tv_gear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding_nano"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:drawableStart="@drawable/gearshift"
+            android:gravity="center|start"
+            android:textSize="@dimen/textSizeSubText2"
+            tools:text="gedah" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

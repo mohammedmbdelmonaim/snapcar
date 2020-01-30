@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/header_view"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/show_room_header_color" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showroom_profile"
+        android:textColor="@color/colorTextPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/header_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_view" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:src="@drawable/back_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <ImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/margin"
+        android:src="@drawable/edit_hi_res_512"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/border_gradient"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@drawable/border_gradient"
+        app:layout_constraintBottom_toTopOf="@id/tv_verified"
+        app:layout_constraintEnd_toStartOf="@id/tv_user_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_view"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/show_room_avatar"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="@id/border_gradient"
+        app:layout_constraintEnd_toEndOf="@id/border_gradient"
+        app:layout_constraintStart_toStartOf="@id/border_gradient"
+        app:layout_constraintTop_toTopOf="@id/border_gradient" />
+
+    <TextView
+        android:id="@+id/tv_show_room_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:gravity="start"
+        android:textSize="@dimen/textSizeText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/rate_layout"
+        app:layout_constraintEnd_toStartOf="@id/tv_location"
+        app:layout_constraintStart_toEndOf="@id/border_gradient"
+        app:layout_constraintTop_toBottomOf="@id/header_view"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Al Jazirah Vechical" />
+
+    <FrameLayout
+        android:id="@+id/rate_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tv_address"
+        app:layout_constraintStart_toStartOf="@id/tv_show_room_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_room_name">
+
+        <RatingBar
+            android:id="@+id/rating"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nano"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="1"
+            android:theme="@style/RatingBar"
+            tools:rating="3" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_micro"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/rate_layout"
+        app:layout_constraintEnd_toStartOf="@id/tv_location"
+        app:layout_constraintStart_toEndOf="@id/rate_layout"
+        app:layout_constraintTop_toTopOf="@id/rate_layout"
+        tools:text="4.5" />
+
+    <TextView
+        android:id="@+id/tv_show_room_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_nano"
+        android:gravity="start"
+        android:textSize="@dimen/textSizeSubtext1"
+        app:layout_constraintBottom_toTopOf="@id/tv_show_room_email"
+        app:layout_constraintEnd_toStartOf="@id/tv_location"
+        app:layout_constraintStart_toStartOf="@id/tv_show_room_name"
+        app:layout_constraintTop_toBottomOf="@id/rate_layout"
+        tools:text="Saudi Arabia - Riyadh" />
+
+    <TextView
+        android:id="@+id/tv_show_room_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_nano"
+        android:autoLink="phone"
+        android:gravity="start"
+        android:textSize="@dimen/textSizeSubtext1"
+        app:layout_constraintBottom_toTopOf="@id/tv_show_room_phone"
+        app:layout_constraintEnd_toStartOf="@id/tv_location"
+        app:layout_constraintStart_toStartOf="@id/tv_show_room_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_room_address"
+        tools:text="mm@ss.crhom" />
+
+    <TextView
+        android:id="@+id/tv_show_room_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_nano"
+        android:gravity="start"
+        android:textColor="#ce3b3b"
+        android:textSize="@dimen/textSizeSubtext1"
+        app:layout_constraintBottom_toTopOf="@id/tv_working_hour"
+        app:layout_constraintEnd_toStartOf="@id/tv_location"
+        app:layout_constraintStart_toStartOf="@id/tv_show_room_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_room_email"
+        tools:text="+966-566039484" />
+
+    <TextView
+        android:id="@+id/tv_working_hour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_nano"
+        android:gravity="start"
+        android:textSize="@dimen/textSizeSubtext1"
+        app:layout_constraintBottom_toTopOf="@id/dealsWithTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_show_room_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_room_phone"
+        app:layout_goneMarginBottom="@dimen/margin"
+        tools:text="Working Hours (9:00 AM to 11:00 PM)" />
+
+
+    <TextView
+        android:id="@+id/dealsWithTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_nano"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:gravity="start"
+        android:textSize="@dimen/textSizeSubtext1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_show_room_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_working_hour"
+        app:layout_goneMarginBottom="@dimen/margin"
+        tools:text="Working Hours (9:00 AM to 11:00 PM)" />
+
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:drawableEnd="@drawable/map_golocation"
+        android:elevation="@dimen/highElevation"
+        android:gravity="center"
+        android:padding="@dimen/padding_micro"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/textSizeSubText2"
+        app:layout_constraintBottom_toBottomOf="@id/tv_working_hour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_view" />
+
+    <TextView
+        android:id="@+id/tv_verified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:text="@string/unverified"
+        android:textColor="#FF1C72CF"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tv_car_number"
+        app:layout_constraintEnd_toEndOf="@id/border_gradient"
+        app:layout_constraintStart_toStartOf="@id/border_gradient"
+        app:layout_constraintTop_toBottomOf="@id/border_gradient" />
+
+    <TextView
+        android:id="@+id/tv_car_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@drawable/shape_rounded_corner_gradient_low_radius"
+        android:elevation="@dimen/highElevation"
+        android:paddingBottom="@dimen/padding_micro"
+        android:paddingEnd="@dimen/padding"
+        android:paddingStart="@dimen/padding"
+        android:paddingTop="@dimen/padding_micro"
+        android:text="Cars available for sell     75"
+        android:textColor="@color/md_white_1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dealsWithTextView"
+        app:layout_goneMarginTop="@dimen/margin_extra" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

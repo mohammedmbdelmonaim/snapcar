@@ -1,0 +1,14 @@
+<resources>
+    <string name="please_wait">please wait ..</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="not_specified">Not Specified</string>
+    <string name="please_fill_data">Please fill in all required data</string>
+    <string name="invalid_area">Invalid Area</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="password_dont_match">Passwords doesn\'t match</string>
+    <string name="password_validation">Your Password must be at least 6 characters and contain 1 capital letter &amp; 1 small letter</string>
+    <string name="invalid_email">Invalid email address</string>
+    <string name="invalid_name">Invalid name</string>
+    <string name="dismiss">Dismiss</string>
+</resources>

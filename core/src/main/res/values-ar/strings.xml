@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="please_wait">من فضلك أنتظر...</string>
+    <string name="male"> رجل</string>
+    <string name="female"> سيدة</string>
+    <string name="not_specified">غير محدد</string>
+    <string name="please_fill_data">من فضلك املأ جميع البيانات</string>
+    <string name="invalid_area">اسم المنطقة غير صحيح</string>
+    <string name="invalid_phone_number"> رقم الجوال غير صحيح</string>
+    <string name="password_dont_match">كلمة المرور غير متطابقة</string>
+    <string name="password_validation">ييجب أن تكون كلمة المرور من 6 أحرف على الأقل وتحتوي على حرف كبير وحرف صغير</string>
+    <string name="invalid_email">عنوان البريد الإلكتروني غير صالح</string>
+    <string name="invalid_name">الاسم غير صحيح</string>
+    <string name="dismiss">إنهاء</string>
+</resources>

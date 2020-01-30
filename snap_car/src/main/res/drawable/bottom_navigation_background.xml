@@ -1,0 +1,8 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_gradient" android:state_checked="true" />
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFF4F4F4" />
+        </shape>
+    </item>
+</selector>

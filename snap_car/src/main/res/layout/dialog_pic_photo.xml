@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/margin"
+    android:background="@drawable/shape_rounded_corner_white_rectangle">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/camer_ic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_nano"
+        android:layout_marginBottom="@dimen/margin_extra"/>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_accept"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_extra"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_nano"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+            android:elevation="@dimen/highElevation"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/camera"
+            android:textAllCaps="true"
+            android:textColor="@color/md_white_1000"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_forget_password" />
+
+        <TextView
+            android:id="@+id/btn_reject"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_extra"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_nano"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+            android:elevation="@dimen/highElevation"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/Gallary"
+            android:textAllCaps="true"
+            android:textColor="@color/md_white_1000"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_forget_password" />
+    </LinearLayout>
+</LinearLayout>

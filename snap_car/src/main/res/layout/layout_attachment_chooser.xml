@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_extra"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_oval_light_blue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_location"
+            style="@style/ProfileBottomSheetAttachmentTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin"
+            android:drawableStart="@drawable/indc_small"
+            android:enabled="true"
+            android:text="@string/location" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        style="@style/ProfileBottomSheetWhiteTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:background="@drawable/shape_oval_light_blue"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:text="@string/cancel"
+        android:textColor="@color/colorAttachmentChooserAccent" />
+
+</LinearLayout>

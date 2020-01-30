@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_all"
+        android:title="@string/show_al"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_yes"
+        android:title="@string/yes"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_no"
+        android:title="@string/no"
+        app:showAsAction="ifRoom" />
+
+</menu>

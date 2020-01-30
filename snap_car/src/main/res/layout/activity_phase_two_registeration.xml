@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/login_bg"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/complete_your_profile"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:src="@drawable/baseline_keyboard_arrow_left_white_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_ultimate"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/shape_rounded_corner_white_rectangle"
+        android:elevation="@dimen/highElevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:src="@drawable/curriculum" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro">
+
+                <com.intcore.snapcar.core.widget.rxedittext.name.NameEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:backgroundTint="@color/colorTextPrimary"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:hint="@string/enter_your_name"
+                    tools:text="deddddddddddddddddddddddddddddddddddd"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_user_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro">
+
+                <com.intcore.snapcar.core.widget.rxedittext.name.NameEditText
+                    android:id="@+id/et_user_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:backgroundTint="@color/colorTextPrimary"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/user_type"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro">
+
+                <com.intcore.snapcar.core.widget.rxedittext.name.NameEditText
+                    android:id="@+id/et_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:backgroundTint="@color/colorTextPrimary"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/gender"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro">
+
+                <com.intcore.snapcar.core.widget.rxedittext.name.NameEditText
+                    android:id="@+id/et_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:backgroundTint="@color/colorTextPrimary"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/country"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro">
+
+                <com.intcore.snapcar.core.widget.rxedittext.name.NameEditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_micro"
+                    android:backgroundTint="@color/colorTextPrimary"
+                    android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/city"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_micro"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro">
+
+                <com.intcore.snapcar.core.widget.rxedittext.area.AreaEditText
+                    android:id="@+id/et_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:hint="@string/enter_your_area"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_micro"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro"
+                app:passwordToggleEnabled="true">
+
+                <com.intcore.snapcar.core.widget.rxedittext.password.PasswordEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorTextPrimary"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:hint="@string/enter_your_password"
+                    android:textColorHint="@color/colorTextPrimary"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_micro"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro"
+                app:passwordToggleEnabled="true">
+
+                <com.intcore.snapcar.core.widget.rxedittext.password.PasswordEditText
+                    android:id="@+id/et_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorTextPrimary"
+                    android:drawablePadding="@dimen/drawablePadding"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:hint="@string/confirm_your_password"
+                    android:textColorHint="@color/colorTextPrimary"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_micro"
+                android:paddingEnd="@dimen/padding_micro"
+                android:paddingStart="@dimen/padding_micro">
+
+                <com.intcore.snapcar.core.widget.rxedittext.email.EmailEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorTextPrimary"
+                    android:hint="@string/enter_your_email"
+                    android:textSize="@dimen/textSizeText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_ultra"
+                android:layout_marginEnd="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+                android:elevation="@dimen/highElevation"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/confirm"
+                android:textAllCaps="true"
+                android:textColor="@color/md_white_1000"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

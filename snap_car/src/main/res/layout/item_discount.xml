@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginStart="@dimen/margin"
+    android:background="@drawable/background_search_edit_text"
+    android:elevation="@dimen/cardview_default_elevation">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/border_gradient"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@drawable/border_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_avatar"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        app:layout_constraintBottom_toBottomOf="@id/border_gradient"
+        app:layout_constraintEnd_toEndOf="@id/border_gradient"
+        app:layout_constraintStart_toStartOf="@id/border_gradient"
+        app:layout_constraintTop_toTopOf="@id/border_gradient"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_hot_zone_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:textColor="@color/colorTextPrimary"
+        app:layout_constraintBottom_toTopOf="@id/tv_sale"
+        app:layout_constraintEnd_toStartOf="@id/tv_copy"
+        app:layout_constraintStart_toEndOf="@id/border_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Manaaaaaaaaar Cafe" />
+
+    <TextView
+        android:id="@+id/tv_sale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:textColor="@color/colorRed"
+        app:layout_constraintBottom_toTopOf="@id/tv_coupon"
+        app:layout_constraintEnd_toStartOf="@id/tv_copy"
+        app:layout_constraintStart_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_hot_zone_name"
+        tools:text="Sale Up to 45" />
+
+    <TextView
+        android:id="@+id/tv_coupon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/textSizeTitle"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_date"
+        app:layout_constraintEnd_toStartOf="@id/tv_copy"
+        app:layout_constraintStart_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_sale"
+        tools:text="CPN 1023" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:textColor="@color/colorTextSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_copy"
+        app:layout_constraintStart_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_coupon"
+        tools:text="Valid to 10/2/2018" />
+
+    <TextView
+        android:id="@+id/tv_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin"
+        android:background="@drawable/shape_blue_rounded_rectangle_background"
+        android:gravity="center"
+        android:paddingBottom="@dimen/padding_micro"
+        android:paddingEnd="@dimen/padding"
+        android:paddingStart="@dimen/padding"
+        android:paddingTop="@dimen/padding_micro"
+        android:text="@string/copy"
+        android:textColor="@color/md_white_1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

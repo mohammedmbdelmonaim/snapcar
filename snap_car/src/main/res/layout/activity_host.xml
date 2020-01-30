@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_host"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLayoutBackground"
+        android:elevation="@dimen/cardview_default_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_chat"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="@dimen/padding_micro"
+            android:paddingBottom="@dimen/padding_micro"
+            android:text="@string/chatt"
+            android:textSize="@dimen/textSizeSubtext1" />
+
+        <TextView
+            android:id="@+id/tv_market"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_market"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="@dimen/padding_micro"
+            android:paddingBottom="@dimen/padding_micro"
+            android:text="@string/favoritee"
+            android:textSize="@dimen/textSizeSubtext1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_notification"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_notification"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="@dimen/padding_micro"
+            android:paddingBottom="@dimen/padding_micro"
+            android:text="@string/notification"
+            android:textSize="@dimen/textSizeSubtext1" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_account"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="@dimen/padding_micro"
+            android:paddingBottom="@dimen/padding_micro"
+            android:text="@string/account"
+            android:textSize="@dimen/textSizeSubtext1" />
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_home"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/add"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:src="@drawable/home_active"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/navigation"
+        app:layout_constraintStart_toStartOf="@id/navigation" />
+
+    <TextView
+        android:id="@+id/tv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/add"
+        android:drawablePadding="@dimen/padding_nano"
+        android:drawableTop="@drawable/home_material"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/home"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/textSizeSubText2"
+        app:layout_constraintBottom_toBottomOf="@id/civ_home"
+        app:layout_constraintEnd_toEndOf="@id/civ_home"
+        app:layout_constraintStart_toStartOf="@id/civ_home"
+        app:layout_constraintTop_toTopOf="@id/civ_home" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteY="631dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

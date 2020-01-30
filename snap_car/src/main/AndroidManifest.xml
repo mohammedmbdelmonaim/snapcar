@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.intcore.snapcar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--<uses-permission android:name="android.permission.READ_SMS" />-->
+    <!--<uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+    <!--<uses-permission android:name="android.permission.BROADCAST_SMS" />-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".SnapCarApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_login"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_login"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name,android:icon">
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:theme="@style/HostTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.phaseoneregisteration.PhaseOneRegistrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignInTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignInTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.resetpassword.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignInTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.photos.PhotosActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.activation.ActivationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignInTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.editUser.EditUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.verificationletter.VerificationLetterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.aboutus.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.contactus.ContactUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.privacyactivtiy.PrivacyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.testmap.MapTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.survey.SurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.editshowroomlocation.EditShowRoomLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.editshowroomphone.EditShowroomPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.editPhone.EditPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.mycars.MyCarsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.editcar.EditCarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.feedback.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.paymenthistory.PaymentHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.editshowroom.EditShowRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.brushtool.BrushToolActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.myinterstes.MyInterestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.forgetpassword.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignInTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.phasetworegisteration.PhaseTwoRegistrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignInTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.updatepassword.UpdatePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.host.HostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAkHamd64WSRFaew4dcMOEIjKTkV9xsfD0" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".ui.tutorial.TutorialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SignInTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.addcar.AddCarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.addcarphotes.AddCarPhotosActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.viewcar.ViewCarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.confirmcommision.ConfirmCommissionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.paymenactivity.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.paymenactivity.PaymentActivityForAddcar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.visitorprofile.VisitorProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.editphoneactivition.EditPhoneActivationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HostTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.blocklist.BlockListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditProfileTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.addinterest.AddInterestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.advancedsearch.AdvancedSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.editinterest.EditInterestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.coupon.CouponActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <service android:name=".backgroundServices.ScheduledJobService">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.FCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ui.chatthread.ChatThreadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.chatsearch.ChatSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.notificationsetting.NotificationSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AddInterestTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_login" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@android:color/white" />
+
+    </application>
+
+</manifest>

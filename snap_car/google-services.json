@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "467269004614",
+    "firebase_url": "https://snap-car-b4c3c.firebaseio.com",
+    "project_id": "snap-car-b4c3c",
+    "storage_bucket": "snap-car-b4c3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467269004614:android:6e1aa363c9a17e43",
+        "android_client_info": {
+          "package_name": "com.intcore.snapcar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467269004614-7pno3r06qg4h9b48lijvo608kkkmcj2h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.intcore.snapcar",
+            "certificate_hash": "f197b73c14e4776aca57e76edcc9aae3ccb1e576"
+          }
+        },
+        {
+          "client_id": "467269004614-5i2t49c2tjgtdjjmaci5qtpq529bc1cv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByVCt3AskBrHMe1d_LB5ZzdYk2-fYuups"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467269004614-5i2t49c2tjgtdjjmaci5qtpq529bc1cv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "467269004614-32n3nlrd51skjrakbjj17f7ad68ggc95.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.amotorz.SnapCar-iOS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

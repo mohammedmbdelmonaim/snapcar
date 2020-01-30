@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user"
+        android:layout_width="@dimen/sizeAvatarChat"
+        android:layout_height="@dimen/sizeAvatarChat"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="1dp"
+        tools:src="@drawable/block_user__material" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin_ultimate_triple"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:orientation="vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="230dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="@dimen/margin_nano"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="3:2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_user"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="10dp"
+            tools:src="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/textSizeSubtext1"
+            tools:text="Sending..."
+            tools:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

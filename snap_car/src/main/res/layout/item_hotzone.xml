@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    android:id="@+id/cart_parent"
+    android:background="@drawable/background_search_edit_text"
+    android:elevation="@dimen/cardview_default_elevation">
+
+    <ImageView
+        android:id="@+id/iv_near_by"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:src="@color/light_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_hot_zone_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_near_by"
+        app:layout_constraintTop_toTopOf="@+id/iv_near_by"
+        tools:text="HotZone" />
+
+    <ImageView
+        android:id="@+id/iv_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:padding="2dp"
+        android:src="@drawable/selector_favorite"
+        app:layout_constraintEnd_toStartOf="@id/iv_vip"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/fav_progress_bar"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fav"
+        app:layout_constraintEnd_toEndOf="@id/iv_fav"
+        app:layout_constraintStart_toStartOf="@id/iv_fav"
+        app:layout_constraintTop_toTopOf="@id/iv_fav" />
+
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:drawableStart="@drawable/selector_gender"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:textSize="@dimen/textSizeSubText2"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_location"
+        app:layout_constraintStart_toEndOf="@+id/iv_near_by"
+        app:layout_constraintTop_toTopOf="@+id/tv_location"
+        tools:text="Men" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_rectangle_orange_background"
+        android:drawableEnd="@drawable/ic_location_on_black_24dp"
+        android:drawablePadding="@dimen/padding_nano"
+        android:gravity="center"
+        android:paddingStart="@dimen/padding_nano"
+        android:paddingTop="@dimen/padding_nano"
+        android:paddingEnd="@dimen/padding_nano"
+        android:paddingBottom="@dimen/padding_nano"
+        android:text="@string/go_location"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/textSizeSubText2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type_hot_zone"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/iv_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/vip_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_fav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_fav" />
+
+    <TextView
+        android:id="@+id/tv_isShowroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/showroom_sample"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:paddingTop="5dp"
+        android:text="@string/showroommm"
+        android:textSize="@dimen/textSizeSubtext1"
+        app:layout_constraintStart_toStartOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_hot_zone_name" />
+
+    <TextView
+        android:id="@+id/tv_type_hot_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_rectangle_cyan_background"
+        android:drawableStart="@drawable/car_hotzone"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:gravity="center"
+        android:paddingStart="4dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="@dimen/padding"
+        android:paddingBottom="2dp"
+        android:text="@string/hot_zone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeSubtext1"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tv_isShowroom"
+        app:layout_constraintTop_toBottomOf="@+id/tv_isShowroom" />
+
+
+    <TextView
+        android:id="@+id/tv_cars_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:drawableStart="@drawable/directions_car_sec"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:textSize="@dimen/textSizeSubText2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_type"
+        app:layout_constraintStart_toEndOf="@+id/tv_type"
+        app:layout_constraintTop_toTopOf="@+id/tv_type"
+        tools:text="132" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

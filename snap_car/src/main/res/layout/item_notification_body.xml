@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_notification_background">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_time"
+        app:layout_constraintEnd_toStartOf="@id/seen_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="khj jhvjhv jhbjhbjhv bjb" />
+
+    <View
+        android:id="@+id/seen_indicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_margin="@dimen/margin"
+        android:background="@drawable/selector_seen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:drawablePadding="@dimen/drawablePadding"
+        android:drawableStart="@drawable/clock_noto"
+        android:textSize="@dimen/textSizeSubtext1"
+        app:layout_constraintBottom_toTopOf="@id/tv_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="1 hour ago" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:textSize="@dimen/textSizeSubtext1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_time"
+        tools:text="lkmflkdfmslkf sdlfjsdlkfjskdfjsf sdlfjsdlkfsdkjfndjf sdfkjsdfjnjsdfnkf" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

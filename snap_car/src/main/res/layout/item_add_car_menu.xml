@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_micro"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginStart="@dimen/margin">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_country"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_doc" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:layout_marginStart="@dimen/margin_micro"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/textSizeText"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintEnd_toStartOf="@id/tv_code"
+        app:layout_constraintStart_toEndOf="@id/iv_country"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Egypt" />
+
+    <ImageView
+        android:id="@+id/tv_code"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:src="@drawable/check_circle_pop"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="02" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_divider"
+        android:background="@color/colorDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_country" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

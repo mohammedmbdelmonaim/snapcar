@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin"
+    android:padding="@dimen/padding"
+    android:background="@drawable/inset_bottomsheet_background">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="@dimen/margin_extra"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:layout_marginEnd="@dimen/margin_extra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="اثwلبعص" />
+
+    <TextView
+        android:id="@+id/tv_sewar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/margin_extra"
+        android:layout_marginTop="@dimen/margin_micro"
+        android:layout_marginEnd="@dimen/margin_extra"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:textSize="@dimen/textSizeText"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:text="testjjjjjjj" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_micro"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sewar">
+
+        <TextView
+            android:id="@+id/btn_accept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_nano"
+            android:layout_marginBottom="@dimen/margin_extra"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+            android:elevation="@dimen/highElevation"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/okk"
+            android:textAllCaps="true"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/textSizeText"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_reject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_nano"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin_extra"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_corner_grey_rectangle"
+            android:elevation="@dimen/highElevation"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/textSizeText"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

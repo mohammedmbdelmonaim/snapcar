@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorLayoutBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:src="@drawable/chevron_left_material" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/pay_commission"
+                android:textColor="@color/colorTextPrimary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_micro"
+                android:layout_marginStart="@dimen/margin_micro"
+                android:text="@string/car_price"
+                android:textColor="#505050"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ed_price"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_ultimate_plus"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="000000000"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:textColor="@color/colorRed" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_micro"
+                android:layout_marginStart="@dimen/margin_micro"
+                android:backgroundTint="@android:color/transparent"
+                android:enabled="false"
+                android:text="@string/sar"
+                android:textColor="@color/colorRed" />
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="1.5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/ed_price"
+                android:layout_marginEnd="@dimen/margin_micro"
+                android:background="@color/bg_gray" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_extra"
+            android:layout_marginTop="@dimen/margin_micro">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/snap_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/margin_micro"
+                    android:layout_marginStart="@dimen/margin_micro"
+                    android:text="@string/snap_car_commission"
+                    android:textColor="#505050"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_commission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_micro"
+                    android:layout_marginTop="@dimen/margin_nano"
+                    android:textColor="#93B5BE"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/ed_commission"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_ultimate"
+                android:backgroundTint="@android:color/transparent"
+                android:enabled="false"
+                android:hint="000000"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:textColor="@color/colorRed" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_micro"
+                android:layout_marginStart="@dimen/margin_micro"
+                android:backgroundTint="@android:color/transparent"
+                android:enabled="false"
+                android:text="@string/sar"
+                android:textColor="@color/colorRed" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_ultimate"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+            android:elevation="@dimen/highElevation"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/pay_now"
+            android:textAllCaps="true"
+            android:textColor="@color/md_white_1000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_forget_password" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_extra"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginStart="@dimen/margin"
+            android:background="@drawable/shape_rounded_corner_gradient_rectangle"
+            android:elevation="@dimen/highElevation"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/pay_later"
+            android:textAllCaps="true"
+            android:textColor="@color/md_white_1000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_forget_password" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/snack_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

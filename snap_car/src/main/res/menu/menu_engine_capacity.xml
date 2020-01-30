@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_all"
+        android:title="@string/show_al"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_1"
+        android:title="@string/_0_800"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_2"
+        android:title="@string/_1000_1300"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_3"
+        android:title="@string/_1400_1600"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_4"
+        android:title="@string/_1800_2000"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_5"
+        android:title="@string/_2200_2800"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_6"
+        android:title="@string/_3000"
+        app:showAsAction="ifRoom" />
+
+</menu>

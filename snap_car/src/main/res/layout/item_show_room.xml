@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginTop="@dimen/margin"
+    android:background="@drawable/background_search_edit_text"
+    android:elevation="@dimen/cardview_default_elevation">
+
+    <ImageView
+        android:id="@+id/iv_near_by"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:src="@color/light_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_hot_zone_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="@dimen/margin"
+        app:layout_constraintEnd_toStartOf="@id/iv_fav"
+        app:layout_constraintStart_toEndOf="@+id/iv_near_by"
+        app:layout_constraintTop_toTopOf="@+id/iv_near_by"
+        tools:text="HotZone" />
+
+    <ImageView
+        android:id="@+id/iv_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_nano"
+        android:layout_marginEnd="@dimen/margin_micro"
+        android:padding="2dp"
+        android:src="@drawable/selector_favorite"
+        app:layout_constraintBottom_toBottomOf="@id/iv_near_by"
+        app:layout_constraintEnd_toStartOf="@id/iv_vip"
+        app:layout_constraintStart_toEndOf="@id/tv_hot_zone_name"
+        app:layout_constraintTop_toTopOf="@id/iv_near_by"
+        app:layout_constraintVertical_bias="0" />
+
+    <ProgressBar
+        android:id="@+id/fav_progress_bar"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fav"
+        app:layout_constraintEnd_toEndOf="@id/iv_fav"
+        app:layout_constraintStart_toStartOf="@id/iv_fav"
+        app:layout_constraintTop_toTopOf="@id/iv_fav" />
+
+    <TextView
+        android:id="@+id/tv_cars_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="2dp"
+        android:drawableStart="@drawable/directions_car_sec"
+        android:drawablePadding="@dimen/drawablePadding"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_near_by"
+        app:layout_constraintStart_toEndOf="@+id/iv_near_by"
+        tools:text="132" />
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_blue_rectangle_background"
+        android:drawableEnd="@drawable/ic_location_on_black_24dp"
+        android:drawablePadding="@dimen/padding_nano"
+        android:gravity="center"
+        android:paddingStart="@dimen/padding_nano"
+        android:paddingTop="@dimen/padding_nano"
+        android:paddingEnd="@dimen/padding_nano"
+        android:paddingBottom="@dimen/padding_nano"
+        android:text="@string/go_location"
+        android:textColor="@color/md_white_1000"
+        android:textSize="@dimen/textSizeSubText2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/vip_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_near_by"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_fav"
+        app:layout_constraintTop_toTopOf="@id/iv_near_by"
+        app:layout_constraintVertical_bias="0" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
